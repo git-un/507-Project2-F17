@@ -89,7 +89,7 @@ print("\n***** PROBLEM 1 *****\n")
 
 class Media():
     pass
-    def __init__(self, diction ):
+    def __init__(self, diction):
         self.title = diction['trackName']
         self.author = diction['artistName']
         self.itunes_URL = diction['trackViewUrl']
@@ -202,12 +202,6 @@ class Movie(Media):
     def title_words_num(self):
         n = self.description_words.count(' ') + 1
         return n
-
-
-
-
-
-
 
 media_samples = sample_get_cache_itunes_data("love")["results"]
 
