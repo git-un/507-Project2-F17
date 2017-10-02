@@ -215,41 +215,6 @@ song_samples = sample_get_cache_itunes_data("love","music")["results"]
 
 movie_samples = sample_get_cache_itunes_data("love","movie")["results"]
 
-media_list = []
-media_csv = []
-
-outfile = open("media.csv","w")
-outfile.write("title, artist, id, url, length, \n")
-for i in range(len(media_samples)):
-    item = Media(media_samples[i])
-    media_list.append(item)
-    outfile.write("{}, {}, {}, {}, {}\n".format(item.title.replace(',',' '), item.author.replace(',',' '), item.itunes_id, item.itunes_URL.replace(',',' '), len(item)))
-
-outfile.close()
-
-song_list = []
-song_csv = []
-
-outfile = open("song.csv","w")
-outfile.write("title, artist, id, url, length, \n")
-for i in range(len(song_samples)):
-    item = Song(song_samples[i])
-    song_list.append(item)
-    outfile.write("{}, {}, {}, {}, {}\n".format(item.title.replace(',',' '), item.author.replace(',',' '), item.itunes_id, item.itunes_URL.replace(',',' '), len(item)))
-
-outfile.close()
-
-movie_list = []
-movie_csv = []
-
-outfile = open("movie.csv","w")
-outfile.write("title, artist, id, url, length, \n")
-for i in range(len(movie_samples)):
-    item = Movie(movie_samples[i])
-    movie_list.append(item)
-    outfile.write("{}, {}, {}, {}, {}\n".format(item.title.replace(',',' '), item.author.replace(',',' '), item.itunes_id, item.itunes_URL.replace(',',' '), len(item)))
-
-outfile.close()
 
 
 
@@ -294,3 +259,40 @@ print("\n***** PROBLEM 4 *****\n")
 ## HINT #3: Check out the sections in the textbook on opening and writing files, and the section(s) on CSV files!
 
 ## HINT #4: Write or draw out your plan for this before you actually start writing the code! That will make it much easier.
+
+
+media_list = []
+media_csv = []
+
+outfile = open("media.csv","w")
+outfile.write("title, artist, id, url, length, \n")
+for i in range(len(media_samples)):
+    item = Media(media_samples[i])
+    media_list.append(item)
+    outfile.write("{}, {}, {}, {}, {}\n".format(item.title.replace(',',' '), item.author.replace(',',' '), item.itunes_id, item.itunes_URL.replace(',',' '), len(item)))
+
+outfile.close()
+
+song_list = []
+song_csv = []
+
+outfile = open("song.csv","w")
+outfile.write("title, artist, id, url, length, \n")
+for i in range(len(song_samples)):
+    item = Song(song_samples[i])
+    song_list.append(item)
+    outfile.write("{}, {}, {}, {}, {}\n".format(item.title.replace(',',' '), item.author.replace(',',' '), item.itunes_id, item.itunes_URL.replace(',',' '), len(item)))
+
+outfile.close()
+
+movie_list = []
+movie_csv = []
+
+outfile = open("movie.csv","w")
+outfile.write("title, artist, id, url, length, \n")
+for i in range(len(movie_samples)):
+    item = Movie(movie_samples[i])
+    movie_list.append(item)
+    outfile.write("{}, {}, {}, {}, {}\n".format(item.title.replace(',',' '), item.author.replace(',',' '), item.itunes_id, item.itunes_URL.replace(',',' '), len(item)))
+
+outfile.close()
