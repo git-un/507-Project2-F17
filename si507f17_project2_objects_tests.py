@@ -62,8 +62,8 @@ class Problem2Song(unittest.TestCase):
 
 	def test_song_contains(self):
 		self.assertTrue("Sun" in self.song1)
-		self.assertTrue("Beat"not in self.song1)
-
+		self.assertTrue("Beat" not in self.song1)
+		
 	def tearDown(self):
 		pass
 
@@ -73,6 +73,7 @@ class Problem2Movie(unittest.TestCase):
 		movie1 = search_data2[0]
 		self.movie_sample = Movie(movie1)
 
+
 	def test_movie_constructor_override(self):
 		self.assertEqual(type(self.movie_sample.genre),type(u""))
 		self.assertEqual(self.movie_sample.title,u"Ratatouille")
@@ -80,7 +81,7 @@ class Problem2Movie(unittest.TestCase):
 		self.assertEqual(self.movie_sample.rating,u"G")
 		self.assertTrue(self.movie_sample.itunes_URL.startswith("http"))
 		self.assertEqual(self.movie_sample.itunes_id,265250067)
-		self.assertEqual(len(self.movie_sample.description),1342)
+		self.assertEqual(len(self.movie_sample.description),1339)
 
 	def test_movie_len(self):
 		self.assertEqual(len(self.movie_sample),111)
@@ -130,5 +131,3 @@ class Problem3(unittest.TestCase):
 
 if __name__ == '__main__':
 	unittest.main(verbosity=2)
-
-
